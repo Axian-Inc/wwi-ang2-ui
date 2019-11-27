@@ -1,0 +1,31 @@
+@import '../../../../styles/variables';
+.container {
+  .header {
+    font-size: 2rem;
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    padding-bottom: 10px;
+    border-bottom: 1px solid $grayLight;
+  }
+  .cart-row {
+    display: grid;
+    grid-template-columns: 1fr 30px 75px;
+    padding: 10px 0;
+    border-bottom: 1px solid $grayLight;
+    .price, .qty {
+      text-align: right;
+    }
+  }
+  .footer {
+    padding-top: 10px;
+    font-size: 1.6rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    .total {
+      text-align: right;
+    }
+  }
+  .checkout {
+    padding: 20px 0;
+  }
+}

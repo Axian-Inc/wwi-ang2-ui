@@ -1,0 +1,26 @@
+@import '_variables';
+.btn {
+  background-color: $blueMid;
+  color: white;
+  text-align: center; 
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 2px;
+  &:hover {
+    background-color: lighten($blueMid, 10);
+  }
+  &.disabled {
+    cursor: default;
+    background-color: lighten($blueMid, 20);
+  }
+  &.special {
+    background-color: $orangeMid;
+    &:hover {
+      background-color: lighten($orangeMid, 10);
+    }
+    &.disabled {
+      cursor: default;
+      background-color: lighten($orangeMid, 20);
+    }
+  }
+}

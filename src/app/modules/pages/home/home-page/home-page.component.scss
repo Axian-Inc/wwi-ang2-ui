@@ -1,0 +1,10 @@
+@import '../../../../../styles/variables';
+.container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  .product-grid {
+    height: calc(100vh - #{$headerHeight} - #{$globalPadding} - #{$globalPadding});
+    overflow-y: auto;
+  }
+}

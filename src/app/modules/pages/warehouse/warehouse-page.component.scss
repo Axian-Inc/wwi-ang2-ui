@@ -1,0 +1,15 @@
+@import '../../../../styles/variables';
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  .header {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom:15px;
+  }
+  .table-placeholder {
+    border: 1px solid $grayMid;
+    height: 300px;
+  }
+}

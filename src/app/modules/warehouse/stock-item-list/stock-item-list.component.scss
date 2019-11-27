@@ -1,0 +1,40 @@
+@import '../../../../styles/variables';
+.stock-item-table {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 65px 65px 65px;
+  border: 1px solid $grayMid;
+  border-radius: 3px;
+  .table-row {
+    display: contents;
+    .table-cell {
+      padding: .75em 1em;
+      border-bottom: 1px solid $grayMid;
+      border-right: 1px solid $grayLight;
+      &.currency {
+        text-align: right;
+        position: relative;
+        &:after {
+          content: '$';
+          color: $grayMid;
+          position: absolute;
+          left:5px;
+        }
+      }
+      &:last-child {
+        border-right: none;
+      }
+    }
+    &.header {
+      .table-cell {
+        background-color: $grayMid;
+        border-right: none;
+      }
+    }
+    &:last-child {
+      .table-cell {
+        border-bottom: none;
+      }
+    }
+  }
+}

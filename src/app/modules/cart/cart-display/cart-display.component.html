@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="header">
+    <mat-icon>shopping_cart</mat-icon>
+    Your Cart
+  </div>
+  <div class="cart-row" *ngFor="let row of cartRows$ | async">
+    <div>{{row.item.StockItemName}}</div>
+    <div class="qty">x {{row.qty}}</div>
+    <div class="price">{{row.item.UnitPrice | currency}}</div>
+  </div>
+  <div class="footer">
+    <div>Total:</div>
+    <div class="total">{{(cartTotal$ | async) | currency}}</div>
+  </div>
+  <div class="checkout">
+    <div class="btn special" [class.disabled]="(cartTotal$ | async) === 0">Checkout</div>
+  </div>
+</div>

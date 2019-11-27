@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="cell image">
+    <mat-icon>image</mat-icon>
+  </div>
+  <div class="cell name">{{ stockItem.StockItemName }}</div>
+  <div class="cell price">
+    <div class="actual">{{ stockItem.UnitPrice | currency }}</div>
+    <div class="retail">({{stockItem.RecommendedRetailPrice | currency}} MSRP)</div></div>
+  <div class="cell lead">{{ stockItem.LeadTimeDays }}</div>
+  <div class="cell weight">{{ stockItem.TypicalWeightPerUnit }}lb</div>
+  <div class="cell qty">
+    <input type="text" placeholder="qty" [value]="qty" (input)="qty = $event.target.value" />
+  </div>
+  <div class="cell add-to-cart">
+    <div class="btn" (click)="addToCart()" [class.disabled]="!qty">Add {{qty}} To Cart</div>
+  </div>
+</div>

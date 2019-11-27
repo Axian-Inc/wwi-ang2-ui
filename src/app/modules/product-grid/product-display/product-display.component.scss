@@ -1,0 +1,62 @@
+@import '../../../../styles/variables';
+.container {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 30px 1fr 150px 75px 75px 100px 150px;
+  border: 1px solid $grayLight;
+  padding: 10px;
+  margin-bottom: 10px;
+  .cell {
+    border-right: 1px solid $grayMid;
+    padding: 0 10px;
+    display:grid;
+    align-items: center;
+    &:last-child,
+    &:first-child {
+      border-right: none;
+    }
+    &.image {
+      background-color: $grayLight;
+      color: $grayDark;
+      width: 30px;
+      height: 30px;
+      padding: 0;
+      justify-content: center;
+      MAT-ICON {
+        font-size: 16px;
+        height: 16px;
+        width: 16px;
+      }
+    }
+    &.name {
+      font-size: 1.3rem;
+    }
+    &.price {
+      .actual {
+        font-size: 1.3rem;
+        margin-bottom: 5px;
+        font-weight: bold;
+      }
+    }
+    &.qty {
+      INPUT {
+        width: 50px;
+        padding: 5px;
+      }
+      overflow: hidden;
+    }
+    &.add-to-cart {
+      .add-btn {
+        background-color: #4383a5;
+        color: white;
+        text-align: center; 
+        cursor: pointer;
+        padding: 10px;
+        &:hover {
+          background-color: lighten(#4383a5, 10);
+        }
+      }
+    }
+  }
+  
+}

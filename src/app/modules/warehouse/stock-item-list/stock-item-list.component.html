@@ -1,0 +1,14 @@
+<div class="stock-item-table" >
+  <div class="table-row header">
+    <div class="table-cell">Item Name</div>
+    <div class="table-cell">Lead</div>
+    <div class="table-cell">Price</div>
+    <div class="table-cell">Retail</div>
+  </div>
+  <div class="table-row" *ngFor="let item of (stockItemList$ | async)">
+    <div class="table-cell">{{item.StockItemName}}</div>
+    <div class="table-cell">{{item.LeadTimeDays}}</div>
+    <div class="table-cell currency">{{item.UnitPrice}}</div>
+    <div class="table-cell currency">{{item.RecommendedRetailPrice}}</div>
+  </div>
+</div>
