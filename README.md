@@ -15,7 +15,7 @@ Ensure you have the following installed on your workstation:
 1. Clone down this repository.
 2. Open the folder in VS Code, the `Remote Containers` extension will notice the `.devcontainer\devcontainer.json` and attempt to build a container to house this environment and open this folder inside the container, as described by the project's root `Dockerfile`.
 3. Once VS Code is running with the folder hosted out of the container, set the application config in the `./environments/environments.ts` file.
-4. Run this application by running `yarn start` from the container terminal and navigate to `http://localhost:53529/`. The app will automatically reload if you change any of the source files.
+4. Run this application by running `yarn start` from the container terminal and navigate to `http://localhost:53529/`. Debug/inspect the application using Chrome Developer Tools (`Ctrl+Shift+I`). The app will automatically reload if you change any of the source files. 
 
 ## Angular CLI Help
 ### Code scaffolding
