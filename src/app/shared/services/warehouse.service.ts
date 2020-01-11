@@ -8,6 +8,7 @@ import { of, Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class WarehouseService {
+
   constructor(private http: HttpClient) {}
 
   public getStockItems(): Observable<any> {
@@ -19,5 +20,9 @@ export class WarehouseService {
         return response;
       })
     )
+  }
+
+  checkout(cartRows: number): Observable<any> {
+    throw new Error("Method not implemented.");
   }
 }
